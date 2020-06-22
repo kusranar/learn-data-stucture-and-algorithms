@@ -12,6 +12,34 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+    for (let i = 1; i <= n; i += 1) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log('fizzbuzz');
+        } else if (i % 3 === 0) {
+            console.log('fizz');
+        } else if (i % 5 === 0) {
+            console.log('buzz');
+        } else {
+            console.log(i);
+        }
+    }
+
+    // if (n < 1) {
+    //     return;
+    // } else {
+    //     if (n % 3 === 0 && n % 5 === 0) {
+    //         console.log('fizzbuzz');
+    //     } else if (n % 3 === 0) {
+    //         console.log('fizz');
+    //     } else if (n % 5 === 0) {
+    //         console.log('buzz');
+    //     } else {
+    //         console.log(n);
+    //     }
+    // }
+
+    // fizzBuzz(n - 1);
+}
 
 module.exports = fizzBuzz;
