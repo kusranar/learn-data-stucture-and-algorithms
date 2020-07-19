@@ -1,0 +1,53 @@
+debugger mode at jest
+- node inspect index.js (im ready to start to inspect your code)
+- to tell this inspector to continue executing type C or Cont for continue
+- to actually inspect a variable, we have to enter a REPL mode
+- and then type the variable or expression, for leave ro debug press Ctrl+C
+
+
+function bubbleSort(array) {
+    var done = false;
+    while (!done) {
+      done = true;
+      for (var i = 1; i < array.length; i += 1) {
+        if (array[i - 1] > array[i]) {
+          done = false;
+          var tmp = array[i - 1];
+          array[i - 1] = array[i];
+          array[i] = tmp;
+        }
+      }
+    }
+  
+    return array;
+  }
+  
+  const numbers = [1, 4, 5, 1, 2, 10, 12, 15, 11, 13, 11, 5];
+  bubbleSort(numbers);
+  console.log(numbers);
+
+
+  Recursion Tips
+  - Figure out the bare minimum pieces of information to represent your problem
+  - give reasonable defaults to the bare minimum pieces
+  - check the base. is there any work left to do? if not return
+  - do some work. call your function again, making sure the arguments have changed in some fashion
+
+
+
+  RUNTIME COMPLEXITIES
+  - Constant Time       1             No matter how many elements we're working with, the algorithm/operation/whatever will always take the same amount of tim
+  - Logarithmic Time    log(n)        You have this if doubling the number of elements you are iterating over doesnt double the amount of work. always assume that searching operations are log(n)
+  - Liniear Time        n             Iterating through all elements in a collection of data. if you see for loop spanning from 0 to array.length, you probably have n or linear runtime.
+  - Quasilinear Time    n * log(n)    You have this if doubling the number of elements you are iterating over doesnt double the amount of work. always assume that any sorting operation is n*log(n).
+  - Quadratic Time      n ^ 2         Every element in a collection has to be compared to every other element. The Handshake Problem
+  - Exponential Time    2 ^ n         If you add a single element to a a collection, the processing power required doubles.
+
+  Identify Runtime Complexity
+  - Iterating with a simple for loop through a single collection?                   Probable O(n)
+  - Iterating through half a collection?                                            Still O(n). There are no constants in runtime.
+  - Iterating through two different collections with the separate for loops?        O(n+m)
+  - Two nested for loops iterating over the same collection?                        I(n^2)
+  - Two nested for loops iterating over different collections?                      O(n*m)
+  - Sorting?                                                                        O(n*log(n))
+  - Searching a sorted array?                                                       O(log(n))
