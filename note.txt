@@ -51,3 +51,9 @@ function bubbleSort(array) {
   - Two nested for loops iterating over different collections?                      O(n*m)
   - Sorting?                                                                        O(n*log(n))
   - Searching a sorted array?                                                       O(log(n))
+
+
+
+  DATA STUCTURES
+  - Ways of organizing information with optimal 'runtime complexity' for adding or removing records.
+  - Javascript natively implements several data stuctures. You will still be asked about 'inferior' data stuctures.
